@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\PlayerController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,5 +20,8 @@ Route::get('/', function () {
 });
 Auth::routes();
 
-Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [HomeController::class, 'index'])->name('home');
 
+Route::get('/players', [PlayerController::class, 'index']);
+
+Route::get('/players/{player}', [PlayerController::class, 'show']);

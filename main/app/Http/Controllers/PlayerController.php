@@ -14,7 +14,9 @@ class PlayerController extends Controller
      */
     public function index()
     {
-        //
+        $players = Player::all();
+
+        return view('players.index', compact('players'));
     }
 
     /**
@@ -46,7 +48,7 @@ class PlayerController extends Controller
      */
     public function show(Player $player)
     {
-        //
+        return view('players.show', compact('player'));
     }
 
     /**
