@@ -11,11 +11,17 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
-    
+
     <!-- Styles -->
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
+
+    <!-- Font Awesome Free -->
+    <script src="{{ config ('services.fontawesome.url') }}" crossorigin="anonymous"></script>
+
+    <!-- Wow! Such favicon! -->
+    <link rel="icon" type="image/png" href="{{ asset ('images/doge.png') }}" />
 </head>
-<body class="bg-gray-100 h-screen antialiased leading-none font-sans">
+<body class="bg-grey-100 h-screen antialiased leading-none font-sans">
     <div id="app">
         <header class="bg-blue-900 py-6">
             <div class="container mx-auto flex justify-between items-center px-6">
@@ -45,6 +51,7 @@
             </div>
         </header>
 
+        @yield('header')
         @yield('content')
     </div>
 </body>
