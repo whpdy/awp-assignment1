@@ -9,7 +9,7 @@ Route::get('/', function () {
 });
 Auth::routes();
 
-//Route::middleware ('auth') -> group (function (){
+Route::middleware ('auth') -> group (function (){
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
@@ -18,9 +18,19 @@ Route::get('/players', [PlayerController::class, 'index']);
 Route::get('/players/{player}', [PlayerController::class, 'show']);
 
 // Delete
-Route::get('/players/{player}', [PlayerController::class, 'show']);
-Route::delete('/players/{player}', [PlayerController::class, 'destroy']);
+Route::get('/players/{player}/', [PlayerController::class, 'show']);
+Route::delete('/players/{player}/', [PlayerController::class, 'destroy']);
 
-//});
+// Create
+Route::get('/players', [PlayerController::class, 'create']);
+Route::post('/players', [PlayerController::class, 'store']);
+
+// Update
+Route::get('/players/{player}/edit', [PlayerController::class, 'edit']);
+Route::patch('/players/{player}/', [PlayerController::class, 'update']);
+
+
+
+});
 
 
