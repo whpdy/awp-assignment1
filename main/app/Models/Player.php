@@ -7,21 +7,22 @@ use Illuminate\Database\Eloquent\Model;
 
 class Player extends Model
 {
+    use HasFactory;
+
     protected $fillable = [
         'name',
         'team',
         'position',
     ];
 
-    public function path($append = "")
+    public function path()
     {
 
-        return "/player/" . $this->id . "/" . $append;
+        return "/players/" . $this->id;
     }
 
     public function getPathAttribute()
     {
-
         return $this->path();
     }
 
