@@ -7,12 +7,12 @@ use Illuminate\Http\Request;
 
 class PlayerController extends Controller
 {
+    const PLAYERS_ON_MAIN_PAGE = 9;
 
     public function index()
     {
-        $players = Player::all();
-
-        return view('players.index', compact('players'));
+        $players = Player::query() -> orderByDesc('name') -> paginate(self::PLAYERS_ON_MAIN_PAGE);
+        return view('players.index', ['players' => $players]);
     }
 
     public function create()
@@ -30,9 +30,7 @@ class PlayerController extends Controller
             ]);
 
         $attributes = $request -> all(
-            'name',
-            'team',
-            'position'
+            'name', 'team', 'position'
         );
 
         $player = Player::create($attributes);
@@ -58,6 +56,7 @@ class PlayerController extends Controller
         ]);
 
         $player -> update($attributes);
+        return redirect() -> route('index');
     }
 
     public function destroy(Player $player)
