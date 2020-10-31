@@ -26,10 +26,11 @@ class Player extends Model
         return $this->path();
     }
 
+    /**
      public function image_url ($size = 150) {
         return fake_image_url ($this -> id, $size);
     }
-     /**
+
      * public function formatted_notes () {
      *
      * return paragraphs_as_html ($this -> notes, 4);

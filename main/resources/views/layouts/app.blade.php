@@ -19,7 +19,7 @@
     <script src="{{ config ('services.fontawesome.url') }}" crossorigin="anonymous"></script>
 
     <!-- Wow! Such favicon! -->
-    <link rel="icon" type="image/png" href="{{ asset ('images/doge.png') }}" />
+    <link rel="icon" type="image/png" href="{{ asset ('images/basketball.png') }}" />
 </head>
 <body class="bg-grey-100 h-screen antialiased leading-none font-sans">
     <div id="app">
@@ -51,8 +51,12 @@
             </div>
         </header>
 
+        <div class="container mx-auto"
+
         @yield('header')
         @yield('content')
+
+    </div>
     </div>
 </body>
 </html>

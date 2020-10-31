@@ -7,7 +7,7 @@
         </div>
         <div>
             <div class="nav-button mr-2">
-                <a href="/dog/"><i class="fas fa-paw mr-2"></i>Add New Player</a>
+                <a href="/player/"><i class="fas fa-paw mr-2"></i>Add New Player</a>
             </div>
         </div>
     </div>
@@ -15,17 +15,17 @@
 @endsection
 
 @section('content')
-    <main class="sm:container sm:mx-auto sm:mt-10">
-        <div class="w-full sm:px-6">
+        <div class="flex flex-wrap">
 
-        <ul>
         @foreach($players as $p)
-            <li>
-                <a href="{{ $p -> path }}">{{ $p -> name }}</a>
+
+            <div class="w-1/3 pr-2">
                 @include( '_player')
-            </li>
-            @endforeach
-        </ul>
+            </div>
+
+        @endforeach
         </div>
-    </main>
+
+    {{ $players -> links () }}
+
 @endsection
