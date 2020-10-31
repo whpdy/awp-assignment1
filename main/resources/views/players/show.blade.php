@@ -16,9 +16,6 @@
 @section('content')
 
     <div class="flex">
-        <div class="w-1/2">
-            <img src="{{ $player -> image_url(500) }}" />
-        </div>
         <div class="w-1/2 text-x1 bg-blue-100 px-4 py-4 border rounded border-gray-500">
             <h2 class="font-bold mb-4">
                 Player Details

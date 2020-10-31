@@ -12,8 +12,6 @@
                 {{ $p -> position }}
             </p>
 
-
-
         </div>
          <div class="w-1/4 my-auto">
             <div class="float-right">
