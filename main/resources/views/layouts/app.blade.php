@@ -18,12 +18,12 @@
     <!-- Font Awesome Free -->
     <script src="{{ config ('services.fontawesome.url') }}" crossorigin="anonymous"></script>
 
-    <!-- Wow! Such favicon! -->
+    <!-- Wow! Such favicon! but no doge it basketball -->
     <link rel="icon" type="image/png" href="{{ asset ('images/basketball.png') }}" />
 </head>
 <body class="bg-grey-100 h-screen antialiased leading-none font-sans">
     <div id="app">
-        <header class="bg-blue-900 py-6">
+        <header class="bg-orange-500 py-6">
             <div class="container mx-auto flex justify-between items-center px-6">
                 <div>
                     <a href="{{ url('/') }}" class="text-lg font-semibold text-gray-100 no-underline">

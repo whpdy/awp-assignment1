@@ -6,10 +6,10 @@
                 {{ $p -> name }}
             </h2>
             <p class="font-bold">
-                {{ $p -> team }}
+                Team: {{ $p -> team }}
             </p>
             <p>
-                {{ $p -> position }}
+                Position: {{ $p -> position }}
             </p>
         </div>
          <div class="w-1/4 my-auto">

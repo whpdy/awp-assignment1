@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class PlayerController extends Controller
 {
-    const PLAYERS_ON_MAIN_PAGE = 9;
+    const PLAYERS_ON_MAIN_PAGE = 12;
 
     public function index()
     {
