@@ -20,7 +20,7 @@ Route::get('/players', [PlayerController::class, 'create']);
 Route::post('/players', [PlayerController::class, 'store']);
 
 Route::get('/players/{player}/edit', [PlayerController::class, 'edit']);
-Route::patch('/players/{player}/', [PlayerController::class, 'update']);
+Route::post('/players/{player}/', [PlayerController::class, 'update']);
 
 
 

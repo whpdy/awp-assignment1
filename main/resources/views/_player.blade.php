@@ -23,7 +23,7 @@
                 </p>
 
                 <p class="crud-button mb-2">
-                    <a href="{{ $p -> path ('edit')}}">
+                    <a href="{{ $p -> path . "/edit"}}">
                         <i class="fas fa-edit"></i>
                     </a>
                 </p>

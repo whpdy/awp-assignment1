@@ -12,6 +12,8 @@
 
     <form method="post" action="{{ $player -> path }}">
 
+        @method('PATCH')
+
         @csrf
 
         <div class="flex flex-wrap">
