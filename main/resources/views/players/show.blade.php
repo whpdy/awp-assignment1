@@ -26,6 +26,7 @@
             <p class="mb-4">
                 Position: {{ $player -> position }}
             </p>
+            <img src="/main/public/images/76ers.png">
         </div>
     </div>
 

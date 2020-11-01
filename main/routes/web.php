@@ -16,13 +16,11 @@ Route::get('/players/{player}', [PlayerController::class, 'show']);
 Route::get('/players/{player}/', [PlayerController::class, 'show']);
 Route::delete('/players/{player}/', [PlayerController::class, 'destroy']);
 
-Route::get('/players', [PlayerController::class, 'create']);
-Route::post('/players', [PlayerController::class, 'store']);
+Route::get('/players/', [PlayerController::class, 'create']);
+Route::post('/players/', [PlayerController::class, 'store']);
 
 Route::get('/players/{player}/edit', [PlayerController::class, 'edit']);
 Route::post('/players/{player}/', [PlayerController::class, 'update']);
-
-
 
 });
 

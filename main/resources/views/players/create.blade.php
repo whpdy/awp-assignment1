@@ -10,7 +10,7 @@
 
 @section ('content')
 
-    <form method="post" action="/player/">
+    <form method="post" action="/players/">
 
         @csrf
 
@@ -66,9 +66,9 @@
 
         <div class="flex flex-wrap mt-8">
             <div class="w-full">
-                <button class="nav-button" type="submit"><i class="fas fa-paw mr-2"></i>Add Player</button>
+                <button class="nav-button" type="submit"><i class="fas fa-plus mr-2"></i>Add Player</button>
                 <a href="/">
-                    <button class="nav-button" type="button"><i class="fas fa-paw mr-2"></i>Cancel</button>
+                    <button class="nav-button" type="button"><i class="fas fa-times mr-2"></i>Cancel</button>
                 </a>
             </div>
         </div>

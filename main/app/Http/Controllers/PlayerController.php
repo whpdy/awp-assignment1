@@ -15,26 +15,28 @@ class PlayerController extends Controller
         return view('players.index', ['players' => $players]);
     }
 
-    public function create()
-    {
-        return view('players.create');
+    public function create () {
+
+        return view ('players.create');
+
     }
 
-    public function store(Request $request)
-    {
+    public function store(Request $request) {
+
         request () -> validate([
             'name' => 'required|min:2|max:50',
-                'team' => 'required|min:5|max:50',
-                'position' => 'required|min:4|max:32'
-
-            ]);
+            'team' => 'required|min:5|max:50',
+            'position' => 'required|min:4|max:32',
+        ]);
 
         $attributes = $request -> all(
-            'name', 'team', 'position'
+            'name',
+                 'team',
+                 'position'
         );
 
-        $player = Player::create($attributes);
-        return redirect ($player -> path);
+        $player = Player::create ($attributes);
+        return redirect() -> route('index');
     }
 
     public function show(Player $player)

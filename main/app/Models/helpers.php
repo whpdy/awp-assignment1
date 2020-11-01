@@ -18,8 +18,3 @@ function paragraphs_as_html ($str, $margin) {
 
 }
 
-function fake_image_url ($id, $size) {
-
-    return "https://placem.at/people/{$size}/{$size}/g?id=" . $id;
-
-}

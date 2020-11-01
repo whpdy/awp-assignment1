@@ -7,7 +7,7 @@
         </div>
         <div>
             <div class="nav-button mr-2">
-                <a href="/players/"><i class="fas fa-paw mr-2"></i>Add New Player</a>
+                <a href="/players/"><i class="fas fa-plus mr-2"></i>Add New Player</a>
             </div>
         </div>
     </div>

@@ -11,14 +11,13 @@
             <p>
                 {{ $p -> position }}
             </p>
-
         </div>
          <div class="w-1/4 my-auto">
             <div class="float-right">
 
                 <p class="crud-button mb-2">
                     <a href="{{ $p -> path }}">
-                        <i class="fas fa-dog"></i>
+                        <i class="fas fa-basketball-ball"></i>
                     </a>
                 </p>
 
@@ -32,7 +31,7 @@
                     @method ('DELETE')
                     @csrf
                     <button type="submit">
-                        <i class="fas fa-dumpster inline crud-button"></i>
+                        <i class="fas fa-trash-alt inline crud-button"></i>
                     </button>
                 </form>
 
